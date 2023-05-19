@@ -41,17 +41,17 @@ class Mailtrap extends Module
     /**
      * @var string
      */
-    protected $baseUrl = 'https://mailtrap.io/api/v1/';
+    protected string $baseUrl = 'https://mailtrap.io/api/v1/';
 
     /**
      * @var array
      */
-    protected $config = ['client_id' => null, 'inbox_id' => null, 'cleanup' => true];
+    protected array $config = ['client_id' => null, 'inbox_id' => null, 'cleanup' => true];
 
     /**
      * @var array
      */
-    protected $requiredFields = ['client_id', 'inbox_id'];
+    protected array $requiredFields = ['client_id', 'inbox_id'];
 
     /**
      * Initialize.
@@ -71,9 +71,9 @@ class Mailtrap extends Module
     /**
      * Clean the inbox after each scenario.
      *
-     * @param \Codeception\TestCase $test
+     * @param \Codeception\TestInterface $test
      */
-    public function _after(\Codeception\TestCase $test)
+    public function _after(\Codeception\TestInterface $test)
     {
         if ($this->config['cleanup']) {
             $this->cleanInbox();
