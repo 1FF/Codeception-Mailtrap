@@ -13,7 +13,7 @@ This package provides a Mailtrap module for Codeception.
 You need to add the repository into your composer.json file
 
 ```bash
-    composer require --dev whatdafox/codeception-mailtrap
+    composer require --dev 1ff/codeception-mailtrap
 ```
 
 ## Setup
